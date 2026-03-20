@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--通用颜色-->
+    <SolidColorBrush x:Key="GenericGreenColor" Color="#28B25c"/>
+    <SolidColorBrush x:Key="GenericWhiteColor" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="GenericBlueColor" Color="#004099"/>
+    <!--鼠标掠过-->
+    <SolidColorBrush x:Key="GenericMouseOverColor" Color="#0E4BDB"/>
+    
+    <SolidColorBrush x:Key="GenericLightGrayColor" Color="#999999"/>
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Style/Button.xaml"/>
+        <ResourceDictionary Source="/Style/TextBlock.xaml"/>
+        <ResourceDictionary Source="/Style/TextBox.xaml"/>
+        <ResourceDictionary Source="/Style/CheckBox.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

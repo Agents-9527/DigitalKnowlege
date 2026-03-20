@@ -23,7 +23,8 @@ namespace 知识产权数字化平台
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            //throw new NotImplementedException();
+            containerRegistry.RegisterForNavigation<LoginView>();
+            containerRegistry.RegisterForNavigation<MainView>();
         }   
 
     }

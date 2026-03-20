@@ -4,36 +4,12 @@
              xmlns:local="clr-namespace:知识产权数字化平台"
              xmlns:prism="http://prismlibrary.com/">
     <Application.Resources>
-        <SolidColorBrush x:Key="BackGround" Color="Blue"/>
-        <Style x:Key="ButtonIconStyle" TargetType="Button">
-            <Setter Property="Foreground" Value="#99A2A9"/>
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="FontSize" Value="30"/>
-            <Setter Property="FontFamily" Value="/Font/iconfont"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Grid>
-                            <Border Background="{TemplateBinding Background}" Height="30" Width="40">
-                                <ContentPresenter Content="{TemplateBinding Content}"/>
-                                
-                            </Border>
-                        </Grid>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#2B2B2B"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                    
-                </Setter.Value>
-            </Setter>
-        </Style>
-               
-               
-               
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                
+                <ResourceDictionary Source="/Style/LightTheme.xaml"/>
+                
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </prism:PrismApplication>
