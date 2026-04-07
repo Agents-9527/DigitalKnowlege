@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:知识产权数字化平台.Views"
              mc:Ignorable="d" 
              xmlns:prism="http://prismlibrary.com/" 
-             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
              prism:ViewModelLocator.AutoWireViewModel="True"
              Background="{DynamicResource LightColor}"
              >
@@ -63,7 +63,7 @@
             HorizontalAlignment="Right" 
             VerticalAlignment="Center" 
             WindowChrome.IsHitTestVisibleInChrome="True"
-            Margin="0 0 80 0">
+            Margin="0 0 20 0">
                 <Button Height="25" Margin="30 0">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
@@ -114,11 +114,11 @@
                 <TextBlock Text="嗨，重庆教主" Foreground="{DynamicResource GenericLightGrayColor}"
                Margin="0 2 0 0" VerticalAlignment="Center"/>
                 <Image Source="/Image/默认头像.png" Width="34" Height="34" Margin="15 0 40 0">
-                    <i:Interaction.Triggers>
-                        <i:EventTrigger EventName="MouseUp">
-                            <i:InvokeCommandAction Command="{Binding LogoutCommand}"/>
-                        </i:EventTrigger>
-                    </i:Interaction.Triggers>
+                    <b:Interaction.Triggers>
+                        <b:EventTrigger EventName="MouseUp">
+                            <b:InvokeCommandAction Command="{Binding LogoutCommand}"/>
+                        </b:EventTrigger>
+                    </b:Interaction.Triggers>
                 </Image>
             </StackPanel>
         </Grid>
