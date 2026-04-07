@@ -20,9 +20,28 @@ namespace 知识产权数字化平台.Views
     /// </summary>
     public partial class MainView : UserControl
     {
+        private List<Expander> expanders = new List<Expander>();
         public MainView()
         {
             InitializeComponent();
+        }
+
+        private void TextBlock_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void expander1_Expanded(object sender, RoutedEventArgs e)
+        {
+            Expander expander = (Expander)sender;
+            if (expander == null) return;
+            foreach (var item in expanders)
+            {
+                if (item.Name != expander.Name)
+                {
+                    item.IsExpanded = false;
+                }
+            }
         }
     }
 }

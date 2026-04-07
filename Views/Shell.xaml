@@ -10,7 +10,7 @@
         prism:ViewModelLocator.AutoWireViewModel="True"
         WindowStyle="None"
         Background="{DynamicResource LightColor}"
-        AllowsTransparency="False"
+        AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanResize"
         mc:Ignorable="d"

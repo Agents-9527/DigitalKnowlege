@@ -10,7 +10,7 @@ using 知识产权数字化平台.Share;
 
 namespace 知识产权数字化平台.ViewModels
 {
-    public class LoginViewModel
+    internal class LoginViewModel
     {
         private IRegionManager RegionManager { get; }
         public ICommand LoginCommand { get; }

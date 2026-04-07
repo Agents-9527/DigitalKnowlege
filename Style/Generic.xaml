@@ -14,5 +14,7 @@
         <ResourceDictionary Source="/Style/TextBlock.xaml"/>
         <ResourceDictionary Source="/Style/TextBox.xaml"/>
         <ResourceDictionary Source="/Style/CheckBox.xaml"/>
+        <ResourceDictionary Source="/Style/RadioButton.xaml"/>
+        <ResourceDictionary Source="Expander.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

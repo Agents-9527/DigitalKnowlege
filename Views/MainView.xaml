@@ -5,11 +5,288 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:知识产权数字化平台.Views"
              mc:Ignorable="d" 
-             xmlns:prism="http://prismlibrary.com/"
+             xmlns:prism="http://prismlibrary.com/" 
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              prism:ViewModelLocator.AutoWireViewModel="True"
              Background="{DynamicResource LightColor}"
-             d:DesignHeight="450" d:DesignWidth="800">
+             >
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Background="{DynamicResource MenuBackgroundColor}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" 
+            Orientation="Horizontal" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Center" 
+            WindowChrome.IsHitTestVisibleInChrome="True">
+                <TextBlock Text="&#xf1e0;" 
+               VerticalAlignment="Center"
+               Margin="16 0 0 0"
+               FontSize="24"
+               Foreground="{DynamicResource GenericGreenColor}"
+               FontFamily="/Font/#FontAwesome"/>
+                <TextBlock Text="LOGO"                            
+               VerticalAlignment="Center" 
+               Margin="9 0" 
+               FontWeight="Bold" 
+               FontSize="24"
+               FontStyle="Italic" 
+               Background="Transparent"
+               MouseUp="TextBlock_MouseUp"
+               Foreground="{DynamicResource GenericGreenColor}">
+
+                </TextBlock>
+                <TextBlock Text="知产代理数字化解决方案" 
+               Foreground="{DynamicResource MenuForegroundColor}"
+               FontWeight="Bold" 
+               FontSize="20" 
+               VerticalAlignment="Center" Margin="32 0 0 0"/>
+                <Rectangle Width="50"/>
+                <RadioButton Content="工作台" Style="{DynamicResource RadioButtonMenuStyle}"/>
+                <RadioButton Content="某列表页" Style="{DynamicResource RadioButtonMenuStyle}"/>
+                <RadioButton Content="邮件" Style="{DynamicResource RadioButtonMenuStyle}"/>
+                <RadioButton Content="客户" Style="{DynamicResource RadioButtonMenuStyle}"/>
+                <RadioButton Content="案件" Style="{DynamicResource RadioButtonMenuStyle}"/>
+                <RadioButton Content="文件" Style="{DynamicResource RadioButtonMenuStyle}"/>
+                <RadioButton Content="财务" Style="{DynamicResource RadioButtonMenuStyle}"/>
+                <RadioButton Content="设置" Style="{DynamicResource RadioButtonMenuStyle}"/>
+            </StackPanel>
+            <StackPanel Grid.Column="2" 
+            Orientation="Horizontal" 
+            HorizontalAlignment="Right" 
+            VerticalAlignment="Center" 
+            WindowChrome.IsHitTestVisibleInChrome="True"
+            Margin="0 0 80 0">
+                <Button Height="25" Margin="30 0">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Grid Background="Transparent">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="/Image/搜索.png" Width="14" Height="14"/>
+                                    <Rectangle Width="6"/>
+                                    <TextBlock x:Name="textblock" Text="搜索" 
+                                   Foreground="{DynamicResource GenericLightGrayColor}"
+                                   Margin="0 2 0 0" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Cursor" Value="Hand"/>
+                                    <Setter Property="Foreground" Value="{DynamicResource GenericGreenColor}" TargetName="textblock"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button Height="45" MinWidth="70" Margin="30 0">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Grid Background="Transparent">
+                                <Border MinWidth="25" HorizontalAlignment="Right" VerticalAlignment="Top"
+                            Background="Red" CornerRadius="5 0 5 0">
+                                    <TextBlock Text="99" Foreground="White" HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
+                                </Border>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="/Image/通知.png" Width="14" Height="14"/>
+                                    <Rectangle Width="6"/>
+                                    <TextBlock x:Name="textblock" Text="通知" 
+                                   Foreground="{DynamicResource GenericLightGrayColor}"
+                                   Margin="0 2 0 0" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Cursor" Value="Hand"/>
+                                    <Setter Property="Foreground" Value="{DynamicResource GenericGreenColor}" TargetName="textblock"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <TextBlock Text="嗨，重庆教主" Foreground="{DynamicResource GenericLightGrayColor}"
+               Margin="0 2 0 0" VerticalAlignment="Center"/>
+                <Image Source="/Image/默认头像.png" Width="34" Height="34" Margin="15 0 40 0">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseUp">
+                            <i:InvokeCommandAction Command="{Binding LogoutCommand}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Image>
+            </StackPanel>
+        </Grid>
+        <!--Bottom 主要内容-->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <!--左侧主菜单-->
+            <Border Grid.Column="0" Background="{DynamicResource LeftMenuBackgroundColor}">
+                <StackPanel>
+                    <Expander x:Name="expander1" 
+                      Style="{DynamicResource MenuExpanderStyle}"
+                      Expanded="expander1_Expanded"
+                      IsExpanded="True">
+                        <Expander.Header>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Image/设置管理.png" Width="13" Height="13" Margin="8 0"/>
+                                <TextBlock Grid.Column="1" Text="设置" VerticalAlignment="Center" Foreground="{DynamicResource GenericWhiteColor}"/>
+                            </Grid>
+                        </Expander.Header>
+                        <StackPanel>
+                            <RadioButton Content="所有待办"
+                                 Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                            <RadioButton Content="新申请"
+                                 Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                            <RadioButton Content="OA答复"
+                                 Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                            <RadioButton Content="复审"
+                                 Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                            <RadioButton Content="无效"
+                                 Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                            <RadioButton Content="其它"
+                                 Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander x:Name="expander2" 
+                      Expanded="expander1_Expanded"
+                      Style="{DynamicResource MenuExpanderStyle}">
+                        <Expander.Header>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Image/应付管理.png" Width="13" Height="13" Margin="8 0"/>
+                                <TextBlock Grid.Column="1" Text="应付管理" VerticalAlignment="Center" Foreground="{DynamicResource GenericWhiteColor}"/>
+                            </Grid>
+                        </Expander.Header>
+                        <StackPanel>
+                            <RadioButton Content="查看" Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                            <RadioButton Content="支付转移" Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                            <RadioButton Content="统计" Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander x:Name="expander3" 
+                      Expanded="expander1_Expanded"
+                      Style="{DynamicResource MenuExpanderStyle}">
+                        <Expander.Header>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Image/到款管理.png" Width="13" Height="13" Margin="8 0"/>
+                                <TextBlock Grid.Column="1" Text="到款管理" VerticalAlignment="Center" Foreground="{DynamicResource GenericWhiteColor}"/>
+                            </Grid>
+                        </Expander.Header>
+                        <StackPanel>
+                            <RadioButton Content="所有到款" Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                            <RadioButton Content="统计到款" Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                            <RadioButton Content="增加到款" Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                            <RadioButton Content="数据打印" Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander x:Name="expander4" 
+                      Expanded="expander1_Expanded"
+                      Style="{DynamicResource MenuExpanderStyle}">
+                        <Expander.Header>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Image/年费管理.png" Width="13" Height="13" Margin="8 0"/>
+                                <TextBlock Grid.Column="1" Text="年费管理" VerticalAlignment="Center" Foreground="{DynamicResource GenericWhiteColor}"/>
+                            </Grid>
+                        </Expander.Header>
+                        <StackPanel>
+                            <RadioButton Content="新增年费" Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                            <RadioButton Content="年费折扣" Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                            <RadioButton Content="活动" Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                            <RadioButton Content="管理" Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander x:Name="expander5" 
+                      Expanded="expander1_Expanded"
+                      Style="{DynamicResource MenuExpanderStyle}">
+                        <Expander.Header>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Image/发票管理.png" Width="13" Height="13" Margin="8 0"/>
+                                <TextBlock Grid.Column="1" Text="发票管理" VerticalAlignment="Center" Foreground="{DynamicResource GenericWhiteColor}"/>
+                            </Grid>
+                        </Expander.Header>
+                        <StackPanel>
+                            <RadioButton Content="所有发票" Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                            <RadioButton Content="上传发票" Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                            <RadioButton Content="管理" Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                            <RadioButton Content="审核" Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander x:Name="expander6" 
+                      Expanded="expander1_Expanded"
+                      Style="{DynamicResource MenuExpanderStyle}">
+                        <Expander.Header>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Image/业绩管理.png" Width="13" Height="13" Margin="8 0"/>
+                                <TextBlock Grid.Column="1" Text="业绩管理" VerticalAlignment="Center" Foreground="{DynamicResource GenericWhiteColor}"/>
+                            </Grid>
+                        </Expander.Header>
+                        <StackPanel>
+                            <RadioButton Content="全年业绩" Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                            <RadioButton Content="个人业绩" Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                            <RadioButton Content="增加" Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                            <RadioButton Content="复审" Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                            <RadioButton Content="导出" Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                            <RadioButton Content="报表" Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander x:Name="expander7" 
+                      Expanded="expander1_Expanded"
+                      Style="{DynamicResource MenuExpanderStyle}">
+                        <Expander.Header>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Image/提成管理.png" Width="13" Height="13" Margin="8 0"/>
+                                <TextBlock Grid.Column="1" Text="提成管理" VerticalAlignment="Center" Foreground="{DynamicResource GenericWhiteColor}"/>
+                            </Grid>
+                        </Expander.Header>
+                        <StackPanel>
+                            <RadioButton Content="部门提成" Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                            <RadioButton Content="个人提成" Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                            <RadioButton Content="提成统计" Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                            <RadioButton Content="管理" Style="{DynamicResource RadioButtonLeftButtonStyle}"/>
+                        </StackPanel>
+                    </Expander>
+                </StackPanel>
+            </Border>
+            <!--右侧主体内容-->
+            <Grid Grid.Column="1">
+
+            </Grid>
+        </Grid>
     </Grid>
 </UserControl>

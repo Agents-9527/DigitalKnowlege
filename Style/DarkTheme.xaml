@@ -7,4 +7,13 @@
     <SolidColorBrush  x:Key="DarkColor" Color="#1A1D23"/>
     <SolidColorBrush x:Key="LoginForegroundColor" Color="#333333"/>
     <SolidColorBrush x:Key="BorderBrushColor" Color="#484D57"/>
+    <SolidColorBrush x:Key="MenuBackgroundColor" Color="#22262F"/>
+    <SolidColorBrush x:Key="MenuForegroundColor" Color="#FFFFFF"/>
+    <LinearGradientBrush x:Key="LeftMenuBackgroundColor">
+        <LinearGradientBrush.GradientStops>
+            <GradientStop Color="#333944" Offset="0"/>
+            <GradientStop Color="#1E212A" Offset="1"/>
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="MenuMouseOverBackgroundColor" Color="#282A2E"/>
 </ResourceDictionary>
