@@ -43,10 +43,13 @@
                     <TextBlock Text="账号登录" FontSize="28" Margin="8 0" FontWeight="Bold" Foreground="{DynamicResource LoginForegroundColor}"/>
                 </StackPanel>
                 <StackPanel Margin="0 35 0 0" HorizontalAlignment="Center">
-                    <TextBox Style="{DynamicResource TextBoxUserNameStyle}"/>
+                    <TextBox Style="{DynamicResource TextBoxUserNameStyle}"
+                             Text="{Binding UserName,UpdateSourceTrigger=PropertyChanged}"
+                             />
                 </StackPanel>
                 <StackPanel Margin="0 35 0 0" HorizontalAlignment="Center">
-                    <TextBox Style="{DynamicResource TextBoxPasswordStyle}"/>
+                    <TextBox Style="{DynamicResource TextBoxPasswordStyle}"
+                             Text="{Binding Password,UpdateSourceTrigger=PropertyChanged}"/>
                 </StackPanel>
                 <StackPanel Margin="0 25 0 0">
                     <Grid Margin="26 0">
@@ -54,9 +57,14 @@
                         <TextBlock Text="忘记(找回)密码" Foreground="{DynamicResource GenericLightGrayColor}" HorizontalAlignment="Right"/>
                     </Grid>
                 </StackPanel>
-                <StackPanel Margin="0 70 0 0" HorizontalAlignment="Center">
+                <!-- 登录状态提示（新增） -->
+                <StackPanel Margin="0 0 0 0" HorizontalAlignment="Center">
+                    <TextBlock Text="{Binding TipText}" Height="20" Width="300" Background="Transparent" Foreground="Red" FontSize="14"/>
+                </StackPanel>
+                <StackPanel Margin="0 20 0 0" HorizontalAlignment="Center">
                     <Button Style="{DynamicResource ButtonLoginStyle}" 
                     Command="{Binding LoginCommand}"
+                    IsEnabled="{Binding IsLoginButtonEnabled}"
                     Content="登录" />
                 </StackPanel>
                 <StackPanel Margin="0 20 0 0" HorizontalAlignment="Center">

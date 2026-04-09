@@ -12,8 +12,8 @@
              >
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Grid Background="{DynamicResource MenuBackgroundColor}">
             <Grid.ColumnDefinitions>
@@ -63,7 +63,7 @@
             HorizontalAlignment="Right" 
             VerticalAlignment="Center" 
             WindowChrome.IsHitTestVisibleInChrome="True"
-            Margin="0 0 20 0">
+            Margin="0 0 80 0">
                 <Button Height="25" Margin="30 0">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">

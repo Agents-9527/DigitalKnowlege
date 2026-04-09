@@ -24,22 +24,13 @@
         <WindowChrome CaptionHeight="60"/>
     </WindowChrome.WindowChrome>
     <Grid WindowChrome.IsHitTestVisibleInChrome="True">
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right" Panel.ZIndex="9999">
-            <Button Style="{StaticResource ButtonIconStyle}" HorizontalAlignment="Right" VerticalAlignment="Top" Content="&#xe624;"  Click="Button_Min"/>
-            <Button Style="{StaticResource ButtonIconStyle}" HorizontalAlignment="Right" VerticalAlignment="Top" Content="&#xe622;"  Click="Button_Max"/>
-            <Button Style="{StaticResource ButtonIconStyle}" HorizontalAlignment="Right" VerticalAlignment="Top" Content="&#xe69b;"  Click="Button_CloseMainWindow"/>
+        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Right" Panel.ZIndex="9999">
+            <Button Style="{StaticResource ButtonIconStyle}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 8 0 0" Content="&#xe624;"  Click="Button_Min"/>
+            <Button Style="{StaticResource ButtonIconStyle}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 8 0 0" Content="&#xe622;"  Click="Button_Max"/>
+            <Button Style="{StaticResource ButtonIconStyle}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 8 0 0" Content="&#xe69b;"  Click="Button_CloseMainWindow"/>
         </StackPanel>
         <ContentControl prism:RegionManager.RegionName="{x:Static share:RegionNames.MainRegion}"/>
+        
     </Grid>
-
+    
 </Window>

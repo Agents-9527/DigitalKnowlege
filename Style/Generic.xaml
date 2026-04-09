@@ -6,7 +6,7 @@
     <SolidColorBrush x:Key="GenericBlueColor" Color="#004099"/>
     <!--鼠标掠过-->
     <SolidColorBrush x:Key="GenericMouseOverColor" Color="#0E4BDB"/>
-    
+
     <SolidColorBrush x:Key="GenericLightGrayColor" Color="#999999"/>
 
     <ResourceDictionary.MergedDictionaries>
