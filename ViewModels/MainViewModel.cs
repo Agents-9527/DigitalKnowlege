@@ -12,17 +12,25 @@ namespace 知识产权数字化平台.ViewModels
 {
     internal class MainViewModel 
     {
-        //private IRegionManager RegionManager { get; }
-        //public ICommand LogoutCommand { get; }
-        //public MainViewModel(IRegionManager regionManager)
-        //{
-        //    RegionManager = regionManager;
-        //    LogoutCommand = ReactiveCommand.Create(OnLogoutCommand);
-        //}
+        private IRegionManager RegionManager { get; }
+        public ICommand LogoutCommand { get; }
+        public ICommand MainLoadCommand { get; }
 
-        //private void OnLogoutCommand()
-        //{
-        //    RegionManager.RequestNavigate(RegionNames.MainRegion, ViewNames.LoginView);
-        //}
+        public MainViewModel(IRegionManager regionManager)
+        {
+            RegionManager = regionManager;
+            LogoutCommand = ReactiveCommand.Create(OnLogoutCommand);
+            LogoutCommand = ReactiveCommand.Create(OnMainload);
+        }
+
+        private void OnMainload()
+        {
+            RegionManager.RequestNavigate(RegionNames.ContainerRegion, ViewNames.indexView);
+        }
+
+        private void OnLogoutCommand()
+        {
+            RegionManager.RequestNavigate(RegionNames.MainRegion, ViewNames.LoginView);
+        }
     }
 }

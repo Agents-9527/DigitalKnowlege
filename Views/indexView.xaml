@@ -6,19 +6,24 @@
              xmlns:local="clr-namespace:知识产权数字化平台.Views"
              mc:Ignorable="d" 
              Background="{DynamicResource MenuBackgroundColor}"
+             xmlns:share="clr-namespace:知识产权数字化平台.Share"
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True"
-             d:DesignHeight="800" d:DesignWidth="1500">
+             d:DesignHeight="450" d:DesignWidth="800">
     <ScrollViewer>
         <StackPanel Margin="15">
-            
             <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
-                <TextBlock Text="&#xf015;" FontFamily="/Font/#FontAwesome" 
-                           Foreground="{DynamicResource GenericLightGrayColor}"
-                           FontSize="16"/>
-                <TextBlock Margin="18 0" Text="工作台" FontWeight="Bold" Foreground="{DynamicResource  GenericLightGrayColor}"/>
+                <TextBlock 
+                    Text="&#xf015;" 
+                    FontFamily="/Font/#FontAwesome" 
+                    Foreground="{DynamicResource GenericLightGrayColor}"/>
+                <TextBlock Text="工作台" 
+                           Margin="10 0 0 0"
+                           Foreground="Black" 
+                           FontSize="14" 
+                           FontWeight="Bold"
+                           VerticalAlignment="Center"/>
             </StackPanel>
-            
         </StackPanel>
     </ScrollViewer>
 </UserControl>
