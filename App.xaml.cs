@@ -25,6 +25,8 @@ namespace 知识产权数字化平台
   {
             containerRegistry.RegisterForNavigation<LoginView>();
             containerRegistry.RegisterForNavigation<MainView>();
+            containerRegistry.RegisterForNavigation<indexView>();
+            
         }   
 
     }

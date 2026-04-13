@@ -9,5 +9,7 @@ namespace 知识产权数字化平台.Share
     public class RegionNames
     {
         public const string MainRegion= "MainRegion";
+        public const string ContainerRegion = "ContainerRegion";
+        
     }
 }

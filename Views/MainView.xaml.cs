@@ -28,7 +28,20 @@ namespace 知识产权数字化平台.Views
 
         private void TextBlock_MouseUp(object sender, MouseButtonEventArgs e)
         {
+            var v = App.Current.Resources;
+            if (v.MergedDictionaries.Count > 0)
+            {
+                string light = "/Style/LightTheme.xaml";
+                string dark = "/Style/DarkTheme.xaml";
 
+                var path = v.MergedDictionaries[0].Source.OriginalString;
+                v.MergedDictionaries.RemoveAt(0);
+                path = path.Equals(light) ? dark : light;
+                var source=new Uri(path, UriKind.RelativeOrAbsolute);
+                var resource =(ResourceDictionary) Application.LoadComponent(source);
+                resource.Source = source;
+                v.MergedDictionaries.Insert(0, resource);
+            }
         }
 
         private void expander1_Expanded(object sender, RoutedEventArgs e)
