@@ -16,4 +16,8 @@
         </LinearGradientBrush.GradientStops>
     </LinearGradientBrush>
     <SolidColorBrush x:Key="MenuMouseOverBackgroundColor" Color="#E1F4E8"/>
+    <SolidColorBrush x:Key="IndexTextForegroundColor" Color="#333333"/>
+    <SolidColorBrush x:Key="IndexCardBackgroundColor" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="IndexCardForegroundColor" Color="#333333"/>
+    
 </ResourceDictionary>

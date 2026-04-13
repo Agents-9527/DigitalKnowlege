@@ -6,19 +6,61 @@
              xmlns:local="clr-namespace:知识产权数字化平台.Views"
              mc:Ignorable="d" 
              Background="{DynamicResource MenuBackgroundColor}"
+             xmlns:share="clr-namespace:知识产权数字化平台.Share"
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True"
-             d:DesignHeight="800" d:DesignWidth="1500">
+             d:DesignHeight="450" d:DesignWidth="800">
     <ScrollViewer>
         <StackPanel Margin="15">
-            
-            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
-                <TextBlock Text="&#xf015;" FontFamily="/Font/#FontAwesome" 
-                           Foreground="{DynamicResource GenericLightGrayColor}"
-                           FontSize="16"/>
-                <TextBlock Margin="18 0" Text="工作台" FontWeight="Bold" Foreground="{DynamicResource  GenericLightGrayColor}"/>
-            </StackPanel>
-            
+            <Grid >
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <TextBlock  Text="&#xf015;" 
+                                FontFamily="/Font/#FontAwesome" 
+                                
+                                VerticalAlignment="Center"
+                                Foreground="{DynamicResource GenericLightGrayColor}"/>
+                               <TextBlock Text="工作台" 
+                                            Margin="10 0 0 0"
+                                            Foreground="{DynamicResource IndexTextForegroundColor}" 
+                                            FontSize="14" 
+                                            FontWeight="Bold"
+                                            VerticalAlignment="Center"/>     
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
+                    <Border Background="{DynamicResource GenericGreenColor}" CornerRadius="3">
+                        <TextBlock Foreground="{DynamicResource GenericWhiteColor}" Margin="8 4 8 4">
+                            <Run Text="&#xf073;" FontFamily="/Font/#FontAwesome"/>
+                            <Run Text="今天是4月14日"/>
+                        </TextBlock>
+                    </Border>
+                </StackPanel>
+                
+            </Grid>
+            <Rectangle Height="15"/>
+            <Grid Height="108">
+                <Border Background="{DynamicResource IndexCardBackgroundColor}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Text="快捷新建" FontWeight="Bold" Margin="2 5 0 0" Foreground="{DynamicResource IndexCardForegroundColor}"/>
+                        <StackPanel  Grid.Row="1" Orientation="Horizontal" >
+                            <Button Style="{DynamicResource QuickNewStyle}" Margin="15 10 10 10">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition Height="auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Image Grid.Row="0" Source="/Image/新建客户.png" Margin="0 10"/>
+                                    <TextBlock Grid.Row="1" Text="新建客户" Foreground="{DynamicResource IndexCardForegroundColor}"/>
+                                </Grid>
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </Grid>
+
         </StackPanel>
     </ScrollViewer>
 </UserControl>

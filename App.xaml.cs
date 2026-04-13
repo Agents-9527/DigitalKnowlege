@@ -22,7 +22,7 @@ namespace 知识产权数字化平台
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
-  {
+        {
             containerRegistry.RegisterForNavigation<LoginView>();
             containerRegistry.RegisterForNavigation<MainView>();
             containerRegistry.RegisterForNavigation<indexView>();

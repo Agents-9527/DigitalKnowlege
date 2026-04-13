@@ -24,5 +24,10 @@ namespace 知识产权数字化平台.Views
         {
             InitializeComponent();
         }
+
+        private void StackPanel_GiveFeedback(object sender, GiveFeedbackEventArgs e)
+        {
+
+        }
     }
 }
