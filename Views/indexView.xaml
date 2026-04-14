@@ -5,13 +5,17 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:知识产权数字化平台.Views"
              mc:Ignorable="d" 
-             Background="{DynamicResource MenuBackgroundColor}"
+             Background="{DynamicResource BackgroundColor}"
              xmlns:share="clr-namespace:知识产权数字化平台.Share"
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True"
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="800" d:DesignWidth="1500">
+    <UserControl.Resources>
+        
+    </UserControl.Resources>
     <ScrollViewer>
         <StackPanel Margin="15">
+            <!--快捷新建-->
             <Grid >
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                     <TextBlock  Text="&#xf015;" 
@@ -46,21 +50,192 @@
                         </Grid.RowDefinitions>
                         <TextBlock Grid.Row="0" Text="快捷新建" FontWeight="Bold" Margin="2 5 0 0" Foreground="{DynamicResource IndexCardForegroundColor}"/>
                         <StackPanel  Grid.Row="1" Orientation="Horizontal" >
-                            <Button Style="{DynamicResource QuickNewStyle}" Margin="15 10 10 10">
+                            <Rectangle Width="38"/>
+                            <Button Style="{DynamicResource QuickNewStyle}" Margin="5">
                                 <Grid>
                                     <Grid.RowDefinitions>
                                         <RowDefinition/>
                                         <RowDefinition Height="auto"/>
                                     </Grid.RowDefinitions>
                                     <Image Grid.Row="0" Source="/Image/新建客户.png" Margin="0 10"/>
-                                    <TextBlock Grid.Row="1" Text="新建客户" Foreground="{DynamicResource IndexCardForegroundColor}"/>
+                                    <TextBlock Grid.Row="1" Text="新建客户" Margin="10 0 10 5" Foreground="{DynamicResource IndexCardForegroundColor}"/>
                                 </Grid>
                             </Button>
+                            <Rectangle Width="38"/>
+                            <Button Style="{DynamicResource QuickNewStyle}" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition Height="auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Image Grid.Row="0" Source="/Image/新建意向.png" Margin="0 10"/>
+                                    <TextBlock Grid.Row="1" Text="新建意向" Margin="10 0 10 5" Foreground="{DynamicResource IndexCardForegroundColor}"/>
+                                </Grid>
+                            </Button>
+                            <Rectangle Width="38"/>
+                            <Button Style="{DynamicResource QuickNewStyle}" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition Height="auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Image Grid.Row="0" Source="/Image/商标立案.png" Margin="0 10"/>
+                                    <TextBlock Grid.Row="1" Text="商标立案" Margin="10 0 10 5" Foreground="{DynamicResource IndexCardForegroundColor}"/>
+                                </Grid>
+                            </Button>
+                            <Rectangle Width="38"/>
+                            <Button Style="{DynamicResource QuickNewStyle}" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition Height="auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Image Grid.Row="0" Source="/Image/专利立案.png" Margin="0 10"/>
+                                    <TextBlock Grid.Row="1" Text="专利立案" Margin="10 0 10 5" Foreground="{DynamicResource IndexCardForegroundColor}"/>
+                                </Grid>
+                            </Button>
+                            <Rectangle Width="38"/>
+                            <Button Style="{DynamicResource QuickNewStyle}" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition Height="auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Image Grid.Row="0" Source="/Image/版权立案.png" Margin="0 10"/>
+                                    <TextBlock Grid.Row="1" Text="版权立案" Margin="10 0 10 5" Foreground="{DynamicResource IndexCardForegroundColor}"/>
+                                </Grid>
+                            </Button>
+                            <Rectangle Width="38"/>
+                            <Button Style="{DynamicResource QuickNewStyle}" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition Height="auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Image Grid.Row="0" Source="/Image/项目立案.png" Margin="0 10"/>
+                                    <TextBlock Grid.Row="1" Text="项目立案" Margin="10 0 10 5" Foreground="{DynamicResource IndexCardForegroundColor}"/>
+                                </Grid>
+                            </Button>
+                            <Rectangle Width="38"/>
+                            <Button Style="{DynamicResource QuickNewStyle}" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition Height="auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Image Grid.Row="0" Source="/Image/法律立案.png" Margin="0 10"/>
+                                    <TextBlock Grid.Row="1" Text="法律立案" Margin="10 0 10 5" Foreground="{DynamicResource IndexCardForegroundColor}"/>
+                                </Grid>
+                            </Button>
+                            <Rectangle Width="38"/>
+                            <Button Style="{DynamicResource QuickNewStyle}" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition Height="auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Image Grid.Row="0" Source="/Image/通知书.png" Margin="0 10"/>
+                                    <TextBlock Grid.Row="1" Text="通知书" Margin="10 0 10 5" Foreground="{DynamicResource IndexCardForegroundColor}"/>
+                                </Grid>
+                            </Button>
+                            <Rectangle Width="38"/>
+                            <Button Style="{DynamicResource QuickNewStyle}" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition Height="auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Image Grid.Row="0" Source="/Image/开票.png" Margin="0 10"/>
+                                    <TextBlock Grid.Row="1" Text="开票" Margin="10 0 10 5" Foreground="{DynamicResource IndexCardForegroundColor}"/>
+                                </Grid>
+                            </Button>
+                            
                         </StackPanel>
                     </Grid>
                 </Border>
             </Grid>
+            <Grid Height="232" Background="Transparent" Margin="0 5 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="15"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" Background="{DynamicResource IndexCardBackgroundColor}">
+                    <Grid Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Text="代办事项" FontWeight="Bold" Foreground="{DynamicResource IndexCardForegroundColor}" Margin="2 5 0 0"/>
+                        <Grid Grid.Row="1" Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <ContentControl Grid.Column="0" Grid.RowSpan="2" Content="{DynamicResource 代办事项}"/>
+                            <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
+                                <TextBlock Text="未处理任务" Foreground="{DynamicResource GenericLightGrayColor}" HorizontalAlignment="Center"/>
+                                <TextBlock Text="78" Foreground="{DynamicResource GenericGreenColor}" Margin="0 10 0 0" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="0" Grid.Column="2" VerticalAlignment="Center">
+                                <TextBlock Text="合同待审核及回收" Foreground="{DynamicResource GenericLightGrayColor}" HorizontalAlignment="Center"/>
+                                <TextBlock Text="42" Foreground="{DynamicResource GenericGreenColor}" Margin="0 10 0 0" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="0" Grid.Column="3" VerticalAlignment="Center">
+                                <TextBlock Text="续展2年内未通知" Foreground="{DynamicResource GenericLightGrayColor}" HorizontalAlignment="Center"/>
+                                <TextBlock Text="78" Foreground="{DynamicResource GenericGreenColor}" Margin="0 10 0 0" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="0" Grid.Column="4" VerticalAlignment="Center">
+                                <TextBlock Text="意向未转案" Foreground="{DynamicResource GenericLightGrayColor}" HorizontalAlignment="Center"/>
+                                <TextBlock Text="78" Foreground="{DynamicResource GenericGreenColor}" Margin="0 10 0 0" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold"/>
+                            </StackPanel>
+                            <!--Line2第二行-->
+                            <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
+                                <TextBlock Text="案件待报送" Foreground="{DynamicResource GenericLightGrayColor}" HorizontalAlignment="Center"/>
+                                <TextBlock Text="78" Foreground="{DynamicResource GenericGreenColor}" Margin="0 10 0 0" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Grid.Column="2" VerticalAlignment="Center">
+                                <TextBlock Text="待撰写案件" Foreground="{DynamicResource GenericLightGrayColor}" HorizontalAlignment="Center"/>
+                                <TextBlock Text="78" Foreground="{DynamicResource GenericGreenColor}" Margin="0 10 0 0" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Grid.Column="3" VerticalAlignment="Center">
+                                <TextBlock Text="国外已审核待支付" Foreground="{DynamicResource GenericLightGrayColor}" HorizontalAlignment="Center"/>
+                                <TextBlock Text="78" Foreground="{DynamicResource GenericGreenColor}" Margin="0 10 0 0" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Grid.Column="4" VerticalAlignment="Center">
+                                <TextBlock Text="交官方待审核" Foreground="{DynamicResource GenericLightGrayColor}" HorizontalAlignment="Center"/>
+                                <TextBlock Text="78" Foreground="{DynamicResource GenericGreenColor}" Margin="0 10 0 0" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold"/>
+                            </StackPanel>
+                        </Grid>
 
+                    </Grid>
+                </Border>
+                    
+                <Border Grid.Column="2" Background="{DynamicResource IndexCardBackgroundColor}">
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Text="任务管理" FontWeight="Bold" Foreground="{DynamicResource IndexCardForegroundColor}" Margin="2 5 0 0"/>
+                        <TabControl Style="{DynamicResource TabControlStyle1}">
+                            <TabItem Header="官文绝限3天内"/>
+                            <TabItem Header="管控绝限3天内"/>
+                            <TabItem Header="已过期"/>
+                        </TabControl>
+                    </Grid>
+                </Border>
+                    
+
+            </Grid>
         </StackPanel>
     </ScrollViewer>
 </UserControl>

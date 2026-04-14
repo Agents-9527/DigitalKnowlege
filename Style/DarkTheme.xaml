@@ -4,7 +4,7 @@
         
         <ResourceDictionary Source="/Style/Generic.xaml"/>
     </ResourceDictionary.MergedDictionaries>
-    <SolidColorBrush  x:Key="DarkColor" Color="#1A1D23"/>
+    <SolidColorBrush  x:Key="BackgroundColor" Color="#1A1D23"/>
     <SolidColorBrush x:Key="LoginForegroundColor" Color="#333333"/>
     <SolidColorBrush x:Key="BorderBrushColor" Color="#484D57"/>
     <SolidColorBrush x:Key="MenuBackgroundColor" Color="#22262F"/>
@@ -19,4 +19,7 @@
     <SolidColorBrush x:Key="IndexTextForegroundColor" Color="#FFFFFF"/>
     <SolidColorBrush x:Key="IndexCardBackgroundColor" Color="#333944"/>
     <SolidColorBrush x:Key="IndexCardForegroundColor" Color="#FFFFFF"/>
+    
+    <!--图片-->
+    <Image x:Key="代办事项" Source="/Image/首页卡片/待办事项暗黑.png" Width="56" Height="60"/>
 </ResourceDictionary>
